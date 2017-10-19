@@ -1,21 +1,23 @@
-# WebsocketPubsub
+# Websocket Publisher and subscriber backed by gproc
 
-**TODO: Add description**
+### Library 
+1. gproc 
+2. plug and cowboy
+3. poison 
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `websocket_pubsub` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:websocket_pubsub, "~> 0.1.0"}
-  ]
-end
+### Installation
 ```
+mix deps.get 
+mix run --no-halt 
+```
+The server run at port 4001
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/websocket_pubsub](https://hexdocs.pm/websocket_pubsub).
+### How to use 
+1. run the server
+2. go to client folder and open it . it will subscribe once client connected to the ws 
+3. to subscribe, use the following format : `subscribe_yourtopic`
+4. you can use http://endpoint:port/broadcast to broadcast . Request Body Format : `{"topic" : "testtopic", "message" : "halo"}`
+
+### Todo 
+There is so many things to do =))
 
